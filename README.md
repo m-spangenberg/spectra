@@ -1,8 +1,7 @@
-# spectral
-A python script to generate a time-based colour spectrum composed of frames sampled at predetermined intervals from a given video file.
+# spectra
 
 #### OVERVIEW
-The name spectral was inspired by [visible light spectroscopy](https://en.wikipedia.org/wiki/Spectroscopy "Spectroscopy") and [emission spectrums](https://en.wikipedia.org/wiki/Emission_spectrum "Emission spectrum"). This attempt to 'fingerprint' a video file's colour spectrum is part of my self-learning process in Python, it is mostly bashed together from trial and error and there is a lot of room for improvement!
+A python script that generates a spectrum composed of average colour pixels sampled from a given video file. I was inspired by [visible light spectroscopy](https://en.wikipedia.org/wiki/Spectroscopy "Spectroscopy") and [emission spectrums](https://en.wikipedia.org/wiki/Emission_spectrum "Emission spectrum"). This first attempt to 'fingerprint' a video file's colour spectrum is part of my self-learning process in Python, it is mostly bashed together by trial and error and there is a lot of room for improvement!
 
 #### EXAMPLE
 ##### Big Buck Bunny - 320x180 - 00:09:56
