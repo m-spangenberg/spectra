@@ -1,11 +1,15 @@
 # spectra
 
 #### OVERVIEW
-A python script that generates a spectrum composed of average colour pixels sampled from a given video file. I was inspired by [visible light spectroscopy](https://en.wikipedia.org/wiki/Spectroscopy "Spectroscopy") and [emission spectrums](https://en.wikipedia.org/wiki/Emission_spectrum "Emission spectrum"). This first attempt to 'fingerprint' a video file's colour spectrum is part of my self-learning process in Python, it is mostly bashed together by trial and error and there is a lot of room for improvement!
+This script attempts to visually 'fingerprint' a video file's colour palette by creating a spectrum composed of the average colours present over a given video file's playback duration. 
+
+It currently uses a very 'hacky' bicubic interpolation approach for finding the average frame colour by simply scaling the frame down to a single pixel. This is computationally efficient but does not truly represent dominant colours and a new cluster-sampling method (K-Means Color Clustering) will have to be implemented to achieve vivid and accurate results.
+
+This script is inspired by [visible light spectroscopy](https://en.wikipedia.org/wiki/Spectroscopy "Spectroscopy") and [emission spectrums](https://en.wikipedia.org/wiki/Emission_spectrum "Emission spectrum").
 
 #### EXAMPLE
 ##### Big Buck Bunny - 320x180 - 00:09:56
-Below are output images at various sample settings. 500 steps seem to be the most pleasing to look at while 50 steps is drastically under-sampled. A new cluster-sampling method will have to be implemented to avoid muddy or overly dark results that come with the bicubic interpolation method used to find the averaged frame colour.
+Below are output images at various sample settings. 500 steps seem to be the most pleasing to look at while 50 steps is drastically under-sampled.
 
 | 50 Steps | 250 Steps | 500 Steps | 1000 Steps |
 | --- | --- | --- | --- |
@@ -28,7 +32,7 @@ All sample images are generated at 500 steps.
 + build simple GUI
 
 #### DEPENDENCIES
-spectral is written in Python 3 and makes use of opencv, ffmpeg, numpy and pillow.
+spectra is written in Python 3 and makes use of opencv, ffmpeg, numpy and pillow.
 
 #### PLEASE NOTE
 This script is a work in progress and I take no responsibility if it destroys or otherwise mangles your files.
