@@ -33,7 +33,7 @@ All sample images are generated at 500 steps.
 + [ ] build simple GUI
 
 #### RUN SPECTRA
-Before starting make sure you have python3, python3-venv, pip3 and ffmpeg installed.pip
+Before starting make sure you have python3, python3-venv, pip3 and ffmpeg installed.
 
 Clone this repo:
 ```
