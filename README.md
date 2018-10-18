@@ -18,10 +18,11 @@ Below are output images at various sample settings. 500 steps seem to be the mos
 #### SAMPLES
 All sample images are generated at 500 steps.
 
-| Title | Resolution | Duration | Time | Output |
+| Title | Resolution | Duration | Output | Output |
 | --- | --- | --- | --- | --- |
 | Big Buck Bunny | 320x180 | 00:09:56 | 002.91S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_500steps.png "spectral 500 samples") |
 | Akira (1988) | 848x480 | 02:04:52 | 162.28S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_akira_500steps.png "spectral 500 samples")
+| Blade Runner (1982) | 1280x528 | 01:58:52 | 233.74S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bladerunner_500steps.png "spectral 500 samples") |
 
 #### TODO
 + basic error handling
