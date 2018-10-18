@@ -25,12 +25,32 @@ All sample images are generated at 500 steps.
 | Blade Runner (1982) | 1280x528 | 01:58:52 | 233.74S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bladerunner_500steps.png "spectral 500 samples") |
 
 #### TODO
-+ basic error handling
-+ clean up code and refactor to make use of functions
-+ test alternative averaging or cluster-sampling methods
-+ reduce disk I/O with caching
-+ speed up with threading [?]
-+ build simple GUI
++ [ ] basic error handling
++ [ ] clean up code and refactor to make use of functions
++ [ ] test alternative averaging or cluster-sampling methods
++ [ ] reduce disk I/O with caching
++ [ ] speed up with threading [?]
++ [ ] build simple GUI
+
+#### RUN SPECTRA
+Before starting make sure you have python3, python3-venv, pip3 and ffmpeg installed.pip
+
+Clone this repo:
+```
+git clone https://github.com/m-spangenberg/spectra.git && cd ./spectra
+```
+Set up a virtual environment:
+```
+python3 -m venv . && source bin/activate
+```
+Make sure the dependencies are met:
+```
+pip3 install -r requirements.txt
+```
+Place a video file in the cloned folder and run spectra:
+```
+you can't run spectra just yet - this repo is a work in progress
+```
 
 #### DEPENDENCIES
 spectra is written in Python 3 and makes use of opencv, ffmpeg, numpy and pillow.
