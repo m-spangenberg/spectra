@@ -1,9 +1,9 @@
 # spectra
 
 #### OVERVIEW
-This script attempts to visually 'fingerprint' a video file's colour palette by creating a spectrum composed of the average colours present over a given video file's playback duration. 
+This script attempts to visually 'fingerprint' a video's colour palette by creating a spectrum composed of the average colours present over time in the video. 
 
-It currently uses a very 'hacky' bicubic interpolation approach for finding the average frame colour by simply scaling the frame down to a single pixel. This is computationally efficient but does not truly represent dominant colours and a new cluster-sampling method (K-Means Color Clustering) will have to be implemented to achieve vivid and accurate results.
+It currently uses a bicubic interpolation approach for finding the average frame colour by simply scaling the frame down to a single pixel. This is computationally efficient but does not truly represent dominant colours and a new cluster-sampling method (K-Means Color Clustering) will have to be implemented to achieve vivid and accurate results.
 
 This script is inspired by [visible light spectroscopy](https://en.wikipedia.org/wiki/Spectroscopy "Spectroscopy") and [emission spectrums](https://en.wikipedia.org/wiki/Emission_spectrum "Emission spectrum").
 
@@ -23,6 +23,7 @@ All sample images are generated at 500 steps.
 | Big Buck Bunny | 320x180 | 00:09:56 | 002.91S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_500steps.png "spectral 500 samples") |
 | Akira (1988) | 848x480 | 02:04:52 | 162.28S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_akira_500steps.png "spectral 500 samples")
 | Blade Runner (1982) | 1280x528 | 01:58:52 | 233.74S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bladerunner_500steps.png "spectral 500 samples") |
+| Ghost In The Shell (1995) | 1280x694 | 01:23:30 | 208.18S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_ghostintheshell_500steps.png "spectral 500 samples") |
 
 #### TODO
 + [ ] basic error handling
