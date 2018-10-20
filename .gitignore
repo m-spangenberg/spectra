@@ -1,0 +1,25 @@
+# Python Venv
+/bin
+/include
+/lib
+/lib64
+pyvenv.cfg
+
+# Spectra
+*.log
+/tmp
+
+# Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.heartbeat
+.idea
+*~
+.settings
+.swp
+.tmp
+ehthumbs.db
+Thumbs.db
