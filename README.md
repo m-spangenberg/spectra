@@ -50,7 +50,7 @@ pip3 install -r requirements.txt
 ```
 Place a video file in the cloned folder and run spectra:
 ```
-you can't run spectra just yet - this repo is a work in progress
+python3 spectra.py
 ```
 
 #### DEPENDENCIES
