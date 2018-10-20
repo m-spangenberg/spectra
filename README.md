@@ -26,12 +26,10 @@ All sample images are generated at 500 steps.
 | Ghost In The Shell (1995) | 1280x694 | 01:23:30 | 208.18S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_ghostintheshell_500steps.png "spectral 500 samples") |
 
 #### TODO
-+ [ ] basic error handling
-+ [ ] clean up code and refactor to make use of functions
-+ [ ] test alternative averaging or cluster-sampling methods
-+ [ ] reduce disk I/O with caching
-+ [ ] speed up with threading [?]
-+ [ ] build simple GUI
++ test alternative averaging or cluster-sampling methods
++ reduce disk I/O with caching
++ speed up with threading [?]
++ build simple GUI
 
 #### RUN SPECTRA
 Before starting make sure you have python3, python3-venv, pip3 and ffmpeg installed.
