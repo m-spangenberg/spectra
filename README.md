@@ -16,14 +16,14 @@ Below are output images at various sample settings - in the first example a samp
 
 | 50 Steps | 250 Steps | 500 Steps | 1000 Steps |
 | --- | --- | --- | --- |
-| ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_50steps.png "spectral 50 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_250steps.png "spectral 250 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_500steps.png "spectral 500 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_1000steps.png "spectral 1000 samples") |
+| ![alt text](https://github.com/m-spangenberg/spectral/blob/master/examples/spectral_bigbuckbunny_50steps.png "spectral 50 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/examples/spectral_bigbuckbunny_250steps.png "spectral 250 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/examples/spectral_bigbuckbunny_500steps.png "spectral 500 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/examples/spectral_bigbuckbunny_1000steps.png "spectral 1000 samples") |
 
 #### SAMPLE SPECTRA
 All sample images are generated at 500 steps.
 
 | Title | Resolution | Duration | Output | Output |
 | --- | --- | --- | --- | --- |
-| Big Buck Bunny | 320x180 | 00:09:56 | 002.91S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_500steps.png "spectral 500 samples") |
+| Big Buck Bunny | 320x180 | 00:09:56 | 002.91S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/examples/spectral_bigbuckbunny_500steps.png "spectral 500 samples") |
 | Akira (1988) | 848x480 | 02:04:52 | 162.28S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_akira_500steps.png "spectral 500 samples")
 | Blade Runner (1982) | 1280x528 | 01:58:52 | 233.74S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bladerunner_500steps.png "spectral 500 samples") |
 | Ghost In The Shell (1995) | 1280x694 | 01:23:30 | 208.18S | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_ghostintheshell_500steps.png "spectral 500 samples") |
