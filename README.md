@@ -1,7 +1,7 @@
 # spectra
 Generate colour palettes from video files using `opencv | ffmpeg, numpy & pillow`
 
-![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_1000steps.png "spectral 1000 samples")
+![alt text](https://github.com/m-spangenberg/spectral/blob/master/examples/spectral_bigbuckbunny_1000steps.png "spectral 1000 samples")
 
 #### OVERVIEW
 This script creates a palette that shows colour trends along the duration of a video.
