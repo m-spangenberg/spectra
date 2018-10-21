@@ -107,14 +107,12 @@ def main():
 
         def printjob(self):
             """print job details to console"""
-            inboundsc = 0
             output_time = time.time() - start_timer
             print(f'filename: {self.input_file}\n\
                 | resolution: {self.width}x{self.height}\n\
                 | duration: {self.duration:.2f} seconds\n\
                 | output: {output_time:.2f} seconds\n\
-                | framecount: {self.framecount}\n\
-                | {inboundsc}')
+                | framecount: {self.framecount}')
 
     # start timer
     start_timer = time.time()
