@@ -10,16 +10,33 @@ def main():
 
     class VideoInfo():
         """Generate information for a given video file"""
-        def __init__(self, input_file, step_size):
-            self.input_file = input_file
+        def __init__(self, step_size):
+            self.input_file = self.get_video()
             self.step_size = step_size
             self.video_file = cv2.VideoCapture(self.input_file)
             self.framecount = int(self.video_file.get(cv2.CAP_PROP_FRAME_COUNT))
             self.fps = int(self.video_file.get(cv2.CAP_PROP_FPS))
             self.width = int(self.video_file.get(cv2.CAP_PROP_FRAME_WIDTH))
             self.height = int(self.video_file.get(cv2.CAP_PROP_FRAME_HEIGHT))
-            self.duration = (self.framecount / self.fps)
             self.current_directory = os.getcwd()
+            self.duration = self.playback_duration()
+
+        def get_video(self):
+            """find video file inside project folder"""
+            filetypes = ['*.avi', '*.mkv', '*.mp4']
+            
+            for filetype in filetypes:
+                for input_file in glob.glob(os.path.join(os.getcwd(), filetype)):
+                    return input_file
+
+        def playback_duration(self):
+            """find the duration of playback in seconds"""
+            try:
+                duration = (self.framecount / self.fps)
+                return duration
+            except:
+                print('> Video file not found, please add one.')
+                quit()
 
         def generate_folders(self):
             """generate needed folders if they don't exist"""
@@ -61,14 +78,14 @@ def main():
             image_list = map(Image.open, glob.glob(os.path.join(self.current_directory,'tmp','*.jpg')))
             imgs_comb = np.hstack(image_list)
             imgs_comb = Image.fromarray( imgs_comb)
-            imgs_comb.save(os.path.join(self.current_directory,'tmp','spectral_tmp.png'))
+            imgs_comb.save(os.path.join(self.current_directory,'tmp','spectra_tmp.png'))
 
         def generate_spectra(self):
             """scale pixel line to final dimensions"""
             final_dimensions = 2000, 600
-            im = Image.open(os.path.join(self.current_directory,'tmp','spectral_tmp.png'))
+            im = Image.open(os.path.join(self.current_directory,'tmp','spectra_tmp.png'))
             im_resized = im.resize(final_dimensions, Image.ANTIALIAS)
-            im_resized.save("spectral_output.png")
+            im_resized.save("spectra_output.png")
 
         def housekeeping(self):
             """remove tmp directory"""
@@ -89,26 +106,15 @@ def main():
 
     # start timer
     start_timer = time.time()
-
-    def get_video():
-        """find video file inside project folder"""
-        filetypes = ['*.avi', '*.mkv', '*.mp4']
-        cwd = os.getcwd()
-
-        for filetype in filetypes:
-            for input_file in glob.glob(os.path.join(cwd, filetype)):
-                return input_file
-
+        
     # set frame grab step size
     step_size = 500
 
-    # get video file
-    input_file = get_video()
-
     # initialize video file and get info
-    video = VideoInfo(input_file, step_size)
+    video = VideoInfo(step_size)
 
     # call jobs
+    video.get_video()
     video.generate_folders()
     video.generate_frames()
     video.generate_pixels()
