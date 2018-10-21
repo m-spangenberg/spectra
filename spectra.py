@@ -96,7 +96,7 @@ def main():
                     os.remove(tmpimage)
                 os.rmdir(os.path.join(self.current_directory,'tmp'))
             except:
-                print('> The temporary directory or it\'s contents could not removed')
+                print('> The temporary directory or it\'s contents could not be removed')
 
         def printjob(self):
             """print job details to console"""
