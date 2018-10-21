@@ -74,7 +74,7 @@ def main():
                 im = Image.open(infile)
                 im.thumbnail(pixel, Image.ANTIALIAS)
                 im.save(infile)
-                infile.close()
+                im.close()
                 
         def generate_pixel_line(self):
             """generate a pixel line from available pixels"""
