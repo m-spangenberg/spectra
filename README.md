@@ -1,21 +1,24 @@
 # spectra
+Generate colour palettes from video files using `opencv | ffmpeg, numpy & pillow`
+
+![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_1000steps.png "spectral 1000 samples")
 
 #### OVERVIEW
-This script attempts to visually 'fingerprint' a video's colour palette by creating a spectrum composed of the average colours present over time in the video. 
+This script creates a video colour palette that shows colour trends along the duration of a video. It works by sampeling frames and showing the average colours present in each sampled frame over the duration of a video.
 
-It currently uses a bicubic interpolation approach for finding the average frame colour by simply scaling the frame down to a single pixel. This is computationally efficient but does not truly represent dominant colours and a new cluster-sampling method (K-Means Color Clustering) will have to be implemented to achieve vivid and accurate results.
+It currently uses a bicubic interpolation approach to find the average colour of each frame grab by simply scaling the frame down to a single pixel. This approach seems to be efficient but does not truly represent dominant colours in each frame. A new cluster-sampling method (K-Means Color Clustering) will have to be implemented to achieve more vivid and accurate results.
 
 This script is inspired by [visible light spectroscopy](https://en.wikipedia.org/wiki/Spectroscopy "Spectroscopy") and [emission spectrums](https://en.wikipedia.org/wiki/Emission_spectrum "Emission spectrum").
 
 #### EXAMPLE
 ##### Big Buck Bunny - 320x180 - 00:09:56
-Below are output images at various sample settings. 500 steps seem to be the most pleasing to look at while 50 steps is drastically under-sampled.
+Below are output images at various sample settings - in the first example a sample of 50 frames are grabbed from the video generating a lower detail colour palette. As the samples increase, colour trends become more apparent. 500 samples seem to be a generous enough amount to get a well defined cross section of colour data from the video file while still remaining quite quick to process.
 
 | 50 Steps | 250 Steps | 500 Steps | 1000 Steps |
 | --- | --- | --- | --- |
 | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_50steps.png "spectral 50 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_250steps.png "spectral 250 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_500steps.png "spectral 500 samples") | ![alt text](https://github.com/m-spangenberg/spectral/blob/master/samples/spectral_bigbuckbunny_1000steps.png "spectral 1000 samples") |
 
-#### SAMPLES
+#### SAMPLE SPECTRA
 All sample images are generated at 500 steps.
 
 | Title | Resolution | Duration | Output | Output |
@@ -51,8 +54,5 @@ Place a video file in the cloned folder and run spectra:
 python3 spectra.py
 ```
 
-#### DEPENDENCIES
-spectra is written in Python 3 and makes use of opencv, ffmpeg, numpy and pillow.
-
-#### PLEASE NOTE
-This script is a work in progress and I take no responsibility if it destroys or otherwise mangles your files.
+#### NOTICE
+This is my first Python project and GitHub repository - please use your better judgement and inspect any code before you run it. I take no responsibility if it destroys or otherwise mangles your files.
