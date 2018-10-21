@@ -15,7 +15,7 @@ def main():
             self.input_file = self.get_video()
             self.step_size = samples
             self.video_file = cv2.VideoCapture(self.input_file)
-            self.framecount = int(self.video_file.get(cv2.CAP_PROP_FRAME_COUNT))
+            self.framecount = int(self.video_file.get(cv2.CAP_PROP_FRAME_COUNT)) - 1
             self.fps = int(self.video_file.get(cv2.CAP_PROP_FPS))
             self.width = int(self.video_file.get(cv2.CAP_PROP_FRAME_WIDTH))
             self.height = int(self.video_file.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -49,7 +49,7 @@ def main():
 
         def calculate_frame_step(self):
             """get the gap in frames between each frame grab"""
-            frame_step = self.framecount / self.step_size
+            frame_step = ( self.framecount / self.step_size )
             step_gap = round(frame_step)
             return step_gap
 
@@ -65,6 +65,8 @@ def main():
                     cv2.imwrite(os.path.join(self.current_directory, 'tmp', 'frame%d.jpg' % count), image)
                     print('grabbing frame: ', generated_image_count)
                     generated_image_count += 1
+                    if generated_image_count == self.step_size:
+                        break
                 count += 1
 
         def generate_pixels(self):
@@ -105,15 +107,20 @@ def main():
 
         def printjob(self):
             """print job details to console"""
+            inboundsc = 0
             output_time = time.time() - start_timer
-            print(f'filename: {self.input_file} | resolution: {self.width}x{self.height} | duration: {self.duration:.2f}\
-            seconds | output: {output_time:.2f} seconds')
+            print(f'filename: {self.input_file}\n\
+                | resolution: {self.width}x{self.height}\n\
+                | duration: {self.duration:.2f} seconds\n\
+                | output: {output_time:.2f} seconds\n\
+                | framecount: {self.framecount}\n\
+                | {inboundsc}')
 
     # start timer
     start_timer = time.time()
         
     # set frame grab step size
-    step_size = 500
+    step_size = 2000
 
     # initialize video file and get info
     video = VideoInfo(step_size)
@@ -131,3 +138,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
