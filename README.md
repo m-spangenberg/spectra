@@ -55,4 +55,5 @@ python3 spectra.py
 ```
 
 #### NOTICE
-This is my first Python project and GitHub repository - please use your better judgement and inspect any code before you run it. I take no responsibility if it destroys or otherwise mangles your files.
+This is my first Python project and GitHub repository.
+Please inspect any code before running it.
