@@ -32,7 +32,7 @@ def main():
             self.input_file = self.get_video()
             self.step_size = samples
             self.video_file = cv2.VideoCapture(self.input_file)
-            self.framecount = int(self.video_file.get(cv2.CAP_PROP_FRAME_COUNT)) - 1
+            self.framecount = int(self.video_file.get(cv2.CAP_PROP_FRAME_COUNT))
             self.fps = int(self.video_file.get(cv2.CAP_PROP_FPS))
             self.width = int(self.video_file.get(cv2.CAP_PROP_FRAME_WIDTH))
             self.height = int(self.video_file.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -66,7 +66,7 @@ def main():
         def calculate_frame_step(self):
             """get the gap in frames between each frame grab"""
             frame_step = (self.framecount / self.step_size)
-            step_gap = round(frame_step)
+            step_gap = round(frame_step) - 1
             return step_gap
 
         def generate_frames(self):
