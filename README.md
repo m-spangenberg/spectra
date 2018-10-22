@@ -6,7 +6,7 @@ Generate colour palettes from video files using `opencv | ffmpeg, numpy & pillow
 #### OVERVIEW
 This script creates a palette that shows colour trends along the duration of a video.
 
-It currently uses a bicubic interpolation to find the average colour of each frame grab by simply scaling the frame down to a single pixel. This approach seems to be efficient but does not truly represent dominant colours in each frame. A new cluster-sampling method (K-Means Color Clustering) will have to be implemented to achieve more vivid and accurate results.
+It currently uses bicubic interpolation to find the average colour of each frame grab by simply scaling the frame down to a single pixel. This approach seems to be efficient but does not truly represent dominant colours in each frame. A new cluster-sampling method (K-Means Color Clustering) will have to be implemented to achieve more vivid and accurate results.
 
 This script is inspired by [visible light spectroscopy](https://en.wikipedia.org/wiki/Spectroscopy "Spectroscopy") and [emission spectrums](https://en.wikipedia.org/wiki/Emission_spectrum "Emission spectrum").
 
